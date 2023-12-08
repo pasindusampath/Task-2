@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.codeschool.task.controller.MainFormController">
+   <children>
+      <ComboBox fx:id="cmbType" layoutX="190.0" layoutY="42.0" prefWidth="150.0" />
+      <TextField fx:id="txtName" layoutX="23.0" layoutY="42.0" promptText="Name" />
+      <RadioButton fx:id="rbMale" layoutX="23.0" layoutY="90.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbFemale" layoutX="81.0" layoutY="90.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <RadioButton fx:id="rbOther" layoutX="149.0" layoutY="90.0" mnemonicParsing="false" text="Other" toggleGroup="$gender" />
+      <TableView fx:id="tblEmployeeData" layoutX="23.0" layoutY="155.0" prefHeight="223.0" prefWidth="558.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="117.0" text="Name" />
+          <TableColumn fx:id="colType" minWidth="3.0" prefWidth="139.0" text="Type" />
+            <TableColumn fx:id="colGender" minWidth="3.0" prefWidth="85.0" text="Gender" />
+            <TableColumn fx:id="colBirthday" minWidth="3.0" prefWidth="102.0" text="Birthday" />
+            <TableColumn fx:id="colOption" minWidth="3.0" prefWidth="114.0" text="Option" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="txtBirthDay" layoutX="351.0" layoutY="42.0" promptText="Birth Day" />
+      <Button layoutX="400.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="72.0" text="Save" />
+   </children>
+</AnchorPane>
